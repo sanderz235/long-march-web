@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* === 文明6风格 配色系统 === */
+:root {
+  --color-parchment: #f4e4c1;
+  --color-parchment-dark: #d4b896;
+  --color-parchment-light: #faf3e0;
+  --color-brown-dark: #3b2a1a;
+  --color-brown-mid: #5c3d2e;
+  --color-red-army: #c41e3a;
+  --color-red-dark: #8b0000;
+  --color-gold: #d4a843;
+  --color-gold-light: #f0d68a;
+  --color-green-army: #4a6741;
+  --color-ink: #2c1810;
+}
+
+/* === 全局样式 ===
+   注意：不要在这里写 * { margin:0; padding:0 } 之类的 reset！
+   Tailwind v4 自带 preflight（@layer base），如果在这里写未分层的
+   margin/padding:0，会覆盖 @layer utilities 里的 .mx-auto/.p-8 等工具类，
+   导致元素永远无法居中/加内边距（CSS 未分层样式优先于分层样式）。 */
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Noto Serif SC', 'SimSun', 'STSong', serif;
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+}
+
+/* === 羊皮纸纹理背景 === */
+.parchment-bg {
+  background-color: var(--color-parchment);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(139, 90, 43, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(139, 90, 43, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(139, 90, 43, 0.1) 0%, transparent 50%);
+}
+
+/* === 自定义滚动条 === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-parchment-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brown-mid);
+  border-radius: 3px;
+}
+
+/* === 动画关键帧 === */
+@keyframes floatUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float-up {
+  animation: floatUp 0.6s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* === 金星闪烁 === */
+.star-gold {
+  filter: drop-shadow(0 0 4px rgba(212, 168, 67, 0.7));
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translate(-50%, -30px); }
+  100% { opacity: 1; transform: translate(-50%, 0); }
+}

@@ -1,0 +1,30 @@
+# --- 通用 ---
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+
+# --- client (Vite/Node) ---
+node_modules/
+client/dist/
+client/dist-ssr/
+client/*.local
+
+# --- windows-game (.NET/WPF) ---
+windows-game/bin/
+windows-game/obj/
+windows-game/.vs/
+windows-game/*.user
+
+# --- android-app (Gradle) ---
+android-app/.gradle/
+android-app/build/
+android-app/app/build/
+android-app/local.properties
+android-app/.idea/
+android-app/captures/
+android-app/.externalNativeBuild/
+android-app/.cxx/
+*.iml
