@@ -1,30 +1,15 @@
-# --- 通用 ---
+# 只推送 web（client），其他平台的源码一律不跟踪
+android-app/
+windows-game/
+.vscode/
+GAME_DESIGN.md
+HOW_TO_RUN.md
+china_map.svg
+
+# 通用
 .DS_Store
 Thumbs.db
 *.log
 .env
 .env.*
 !.env.example
-
-# --- client (Vite/Node) ---
-node_modules/
-client/dist/
-client/dist-ssr/
-client/*.local
-
-# --- windows-game (.NET/WPF) ---
-windows-game/bin/
-windows-game/obj/
-windows-game/.vs/
-windows-game/*.user
-
-# --- android-app (Gradle) ---
-android-app/.gradle/
-android-app/build/
-android-app/app/build/
-android-app/local.properties
-android-app/.idea/
-android-app/captures/
-android-app/.externalNativeBuild/
-android-app/.cxx/
-*.iml
