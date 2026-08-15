@@ -1,15 +1,30 @@
-# 只推送 web（client），其他平台的源码一律不跟踪
-android-app/
-windows-game/
-.vscode/
-GAME_DESIGN.md
-HOW_TO_RUN.md
-china_map.svg
-
-# 通用
-.DS_Store
-Thumbs.db
+# Logs
+logs
 *.log
-.env
-.env.*
-!.env.example
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 非 web 内容（本地保留，不推送）
+/android-app/
+/windows-game/
+/GAME_DESIGN.md
+/HOW_TO_RUN.md
+/china_map.svg
