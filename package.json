@@ -1,0 +1,8 @@
+{
+  "name": "long-march-web",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm --prefix client install --no-audit --no-fund && npm --prefix client run build"
+  }
+}
